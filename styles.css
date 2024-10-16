@@ -24,14 +24,15 @@ body {
 
 .title-container {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Change to column to stack logo and title */
+  align-items: center; /* Center items */
   margin-bottom: 40px;
 }
 
 .logo {
   width: 50px; /* Adjust logo size */
   height: 50px;
-  margin-right: -40px; /* Add space between the logo and the title */
+  margin-bottom: 10px; /* Add space between the logo and the title */
 }
 
 h1 {
@@ -39,8 +40,7 @@ h1 {
   font-family: "Inter", sans-serif; /* Title in Inter font */
   font-weight: 300; /* Set font weight to 300 */
   letter-spacing: 12px; /* Letter spacing set to 12px */
-  margin-top: 1px; /* Set top margin */
-  margin-bottom: 0; /* Set bottom margin */
+  margin: 0; /* Remove default margins */
   display: block; /* Set display to block */
   box-sizing: border-box; /* Set box-sizing to border-box */
 }
