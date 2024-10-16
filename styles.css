@@ -55,7 +55,7 @@ h1 {
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
   gap: 20px; /* Reduced space between time sections for smaller screens */
-  margin-top: 20px; /* Optional: Add space above the countdown */
+  margin-top: -35px; /* Optional: Add space above the countdown */
 }
 
 .time {
