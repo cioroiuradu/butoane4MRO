@@ -87,19 +87,6 @@ h1 {
   display: block; /* Set display to block */
 }
 
-/* Footer Style */
-.footer {
-  font-family: "Inter", sans-serif; /* Same font as title */
-  font-size: 14px; /* Smaller font size for the footer */
-  margin-top: 20px; /* Space above the footer */
-  color: white; /* Make sure the text color is white */
-  text-align: center; /* Center the text */
-  padding: 10px; /* Add some padding */
-  position: relative; /* Ensure proper positioning */
-  bottom: 0; /* Position at the bottom */
-  width: 100%; /* Full width */
-}
-
 /* Responsive adjustments */
 @media (max-width: 600px) {
   h1 {
