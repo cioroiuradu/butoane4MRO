@@ -7,12 +7,19 @@
 body {
   height: 100vh;
   display: flex;
+  flex-direction: column; /* Change to column to allow footer positioning */
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
   background: linear-gradient(135deg, #161616, #c8212a); /* Inverted gradient */
   color: white;
   text-align: center;
+  padding: 20px; /* Padding for smaller screens */
+}
+
+.container {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Maximum width for larger screens */
 }
 
 .title-container {
@@ -24,7 +31,7 @@ body {
 .logo {
   width: 50px; /* Adjust logo size */
   height: 50px;
-  margin-right: 20px; /* Add space between the logo and the title */
+  margin-right: -40px; /* Add space between the logo and the title */
 }
 
 h1 {
@@ -34,16 +41,19 @@ h1 {
   letter-spacing: 12px; /* Letter spacing set to 12px */
   margin-top: 1px; /* Set top margin */
   margin-bottom: 0; /* Set bottom margin */
-  line-height: 1; /* Set line height */
   display: block; /* Set display to block */
   box-sizing: border-box; /* Set box-sizing to border-box */
+}
+
+.title-text {
+  line-height: 1.5; /* Increased line height for more space between rows */
 }
 
 .countdown {
   display: flex;
   justify-content: center; /* Center items horizontally */
   align-items: center; /* Center items vertically */
-  gap: 40px; /* Increased space between time sections */
+  gap: 20px; /* Reduced space between time sections for smaller screens */
   margin-top: 20px; /* Optional: Add space above the countdown */
 }
 
@@ -72,7 +82,42 @@ h1 {
   letter-spacing: 5px; /* Letter spacing set to 5px */
   line-height: 20px; /* Line height set to 20px */
   margin-right: -5px; /* Margin right set to -5px */
-  margin-top: -15px; /* Adjusted margin top to 5px */
+  margin-top: -15px; /* Adjusted margin top */
   text-size-adjust: 100%; /* Adjust text size to 100% */
   display: block; /* Set display to block */
+}
+
+/* Footer Style */
+.footer {
+  font-family: "Inter", sans-serif; /* Same font as title */
+  font-size: 14px; /* Smaller font size for the footer */
+  margin-top: 20px; /* Space above the footer */
+  color: white; /* Make sure the text color is white */
+  text-align: center; /* Center the text */
+  padding: 10px; /* Add some padding */
+  position: relative; /* Ensure proper positioning */
+  bottom: 0; /* Position at the bottom */
+  width: 100%; /* Full width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 16px; /* Smaller font size for the title on mobile */
+  }
+
+  #days,
+  #hours,
+  #minutes,
+  #seconds {
+    font-size: 72px; /* Smaller font size for the countdown numbers on mobile */
+  }
+
+  .label {
+    font-size: 10px; /* Smaller font size for the labels on mobile */
+  }
+
+  .countdown {
+    gap: 15px; /* Reduced space between time sections for mobile */
+  }
 }
