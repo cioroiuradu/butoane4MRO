@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #161616, #c8212a); /* Inverted gradient */
+  color: white;
+  text-align: center;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 50px; /* Adjust logo size */
+  height: 50px;
+  margin-right: 20px; /* Add space between the logo and the title */
+}
+
+h1 {
+  font-size: 18px; /* Set font size to 18px */
+  font-family: "Inter", sans-serif; /* Title in Inter font */
+  font-weight: 300; /* Set font weight to 300 */
+  letter-spacing: 12px; /* Letter spacing set to 12px */
+  margin-top: 1px; /* Set top margin */
+  margin-bottom: 0; /* Set bottom margin */
+  line-height: 1; /* Set line height */
+  display: block; /* Set display to block */
+  box-sizing: border-box; /* Set box-sizing to border-box */
+}
+
+.countdown {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 40px; /* Increased space between time sections */
+  margin-top: 20px; /* Optional: Add space above the countdown */
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text and numbers vertically */
+  text-align: center; /* Ensure the text is centered */
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+  font-size: 96px; /* Set font size to 96px */
+  text-size-adjust: 100%; /* Adjust text size to 100% */
+  display: block; /* Set display to block */
+  box-sizing: border-box; /* Set box sizing to border box */
+  font-family: "Rajdhani", sans-serif; /* Numbers in Rajdhani font */
+  font-weight: 600; /* Semi-bold weight for the numbers */
+}
+
+.label {
+  font-family: "Inter", sans-serif; /* Labels in Inter font */
+  font-size: 12px; /* Font size set to 12px */
+  letter-spacing: 5px; /* Letter spacing set to 5px */
+  line-height: 20px; /* Line height set to 20px */
+  margin-right: -5px; /* Margin right set to -5px */
+  margin-top: -15px; /* Adjusted margin top to 5px */
+  text-size-adjust: 100%; /* Adjust text size to 100% */
+  display: block; /* Set display to block */
+}
