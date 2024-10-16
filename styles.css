@@ -7,7 +7,6 @@
 body {
   height: 100vh;
   display: flex;
-  flex-direction: column; /* Change to column to allow footer positioning */
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
@@ -24,14 +23,15 @@ body {
 
 .title-container {
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack logo and title vertically on mobile */
+  align-items: center; /* Center items horizontally */
   margin-bottom: 40px;
 }
 
 .logo {
   width: 50px; /* Adjust logo size */
   height: 50px;
-  margin-right: -40px; /* Add space between the logo and the title */
+  margin-bottom: 10px; /* Space between logo and title */
 }
 
 h1 {
@@ -43,6 +43,7 @@ h1 {
   margin-bottom: 0; /* Set bottom margin */
   display: block; /* Set display to block */
   box-sizing: border-box; /* Set box-sizing to border-box */
+  text-align: center; /* Center text within h1 */
 }
 
 .title-text {
@@ -89,6 +90,11 @@ h1 {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+  .title-container {
+    flex-direction: column; /* Ensure vertical stacking on mobile */
+    align-items: center; /* Center items horizontally */
+  }
+
   h1 {
     font-size: 16px; /* Smaller font size for the title on mobile */
   }

@@ -13,10 +13,12 @@ function updateCountdown() {
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the respective HTML elements
-  document.getElementById("days").innerHTML = days;
-  document.getElementById("hours").innerHTML = hours;
-  document.getElementById("minutes").innerHTML = minutes;
-  document.getElementById("seconds").innerHTML = seconds;
+  document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+  document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+  document.getElementById("minutes").innerHTML =
+    minutes < 10 ? "0" + minutes : minutes;
+  document.getElementById("seconds").innerHTML =
+    seconds < 10 ? "0" + seconds : seconds;
 
   // If the countdown is over, display a message
   if (distance < 0) {
