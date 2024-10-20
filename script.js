@@ -27,8 +27,5 @@ function updateCountdown() {
   }
 }
 
-// Call updateCountdown immediately to fix the 00 00 00 00 issue
-updateCountdown();
-
 // Update the countdown every 1 second
-const x = setInterval(updateCountdown, 1000);
+setInterval(updateCountdown, 1000);
