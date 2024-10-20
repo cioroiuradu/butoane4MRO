@@ -1,7 +1,7 @@
 // Get the target date from localStorage or set a new default
 let targetDate = localStorage.getItem("targetDate")
   ? new Date(localStorage.getItem("targetDate")).getTime()
-  : new Date("2024-10-20T21:04:00").getTime(); // Default date
+  : new Date("2024-10-20T21:06:40").getTime(); // Default date
 
 let countdownEnded = localStorage.getItem("countdownEnded") === "true"; // Check if the countdown has ended
 
