@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="signin.css" />
+    <!-- Link to the new CSS file -->
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo" />
+      <h1 class="title">Sign In to 4MRO</h1>
+      <h5 class="faded">
+        Enter your email and password to be able to change settings.
+      </h5>
+      <form class="login-form">
+        <div class="input-container">
+          <i class="bx bx-envelope"></i>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Type your email"
+            required
+          />
+        </div>
+
+        <div class="input-container">
+          <i class="bx bx-lock-alt"></i>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Type your password"
+            required
+          />
+        </div>
+
+        <button type="submit" class="submit-btn">Sign In</button>
+      </form>
+
+      <button class="back-btn" onclick="window.location.href='index.html'">
+        Back
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

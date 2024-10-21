@@ -1,0 +1,136 @@
+/* Styles for the title */
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px; /* Add space below the logo */
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-size: 36px; /* Adjust size as needed */
+  font-weight: 700;
+  color: white; /* Text color */
+  text-align: center; /* Center align */
+  margin: 0; /* Reset margin */
+  letter-spacing: 0px;
+}
+
+/* Styles for the faded h5 text */
+.faded {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500; /* Adjust size as needed */
+  color: #dedede; /* Lighter color for faded text */
+  text-align: center; /* Center align */
+  margin: 10px 0; /* Space below h5 */
+}
+
+/* Styles for the container */
+.container {
+  width: 100%;
+  max-width: 400px; /* Adjust width as needed */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center contents */
+}
+
+/* Styling for input containers to include icons */
+.input-container {
+  position: relative; /* For positioning the icon inside the input */
+  width: 100%; /* Full width for the input */
+  margin-top: 10px; /* Space between elements */
+}
+
+/* Styling for the icon */
+.input-container i {
+  position: absolute; /* Position the icon inside the input */
+  left: 15px; /* Space from the left */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Center the icon */
+  color: white; /* Icon color */
+}
+
+/* Styling for the label */
+.input-container label {
+  position: absolute; /* Positioning the label */
+  left: 15px; /* Align with the icon */
+  top: 10px; /* Adjust height to place it above the input */
+  color: white; /* Label text color */
+  font-family: "Inter", sans-serif; /* Consistent font */
+  font-size: 14px; /* Adjust size as needed */
+  transition: 0.3s; /* Smooth transition */
+}
+
+/* Styling for the form and its elements */
+.login-form {
+  display: flex;
+  flex-direction: column; /* Stack labels and inputs */
+  width: 100%; /* Full width */
+}
+
+.login-form label {
+  display: inline-block; /* Ensures label appears above input */
+  font-family: "Inter", sans-serif;
+  color: white; /* Label text color */
+  margin-bottom: 10px;
+  margin-left: 25px; /* Space above label */
+}
+
+/* Styling for the input field */
+.login-form input {
+  width: 100%; /* Full width of the input field */
+  padding: 15px 10px 15px 40px; /* Add left padding to accommodate the icon */
+  border: none;
+  border-radius: 10px; /* Rounded input corners */
+  margin-top: 5px;
+  background-color: rgba(255, 255, 255, 0.3); /* Input background */
+  color: white; /* Input text color */
+  font-family: "Inter", sans-serif; /* Ensure consistency with label font */
+  font-size: 16px; /* Adjust font size for better readability */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Placeholder styling */
+.login-form input::placeholder {
+  color: #e4e4e4; /* Placeholder text color */
+  opacity: 0.7; /* Slightly reduce opacity for a softer look */
+  font-family: "Inter", sans-serif; /* Ensure consistency with label font */
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 110px;
+  margin-left: 25px; /* Space above label */
+}
+
+/* Styling for the submit button */
+.submit-btn {
+  margin-top: 20px; /* Space above button */
+  padding: 15px; /* Increase padding for consistent height */
+  width: 100%; /* Full width for the button */
+  background-color: #c8212a; /* Primary color */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Styling for the back button */
+.back-btn {
+  margin-top: 20px; /* Space above button */
+  padding: 10px;
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* Primary color */
+  border: 2px solid #c8212a; /* Border matching primary color */
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  width: 100%; /* Full width for the button */
+}
+
+.back-btn:hover {
+  background-color: #c8212a; /* Change background on hover */
+  color: white; /* Change text color on hover */
+}
