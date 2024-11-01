@@ -76,12 +76,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Function to set a new target date
+  //Function to set a new target date
   function setNewDate(newDate) {
     targetDate = new Date(newDate).getTime(); // Update the target date
     localStorage.setItem("targetDate", newDate); // Save the new target date to localStorage
-    countdownEnded = false; // Reset the countdownEnded flag
-    localStorage.setItem("countdownEnded", "false"); // Save to localStorage
+    countdownEnded = false; // Reset the countdown ended flag
+    localStorage.setItem("countdownEnded", "false"); // Ensure it is reset in localStorage
+
+    // Reset the title
+    document.querySelector(".title-text").innerHTML =
+      "URMĂTOAREA GLUMĂ CU BUTOANELE VA FI ÎN:";
+
+    // Reset the countdown numbers display
+    updateCountdown();
   }
 
   // Initial call to update the countdown
@@ -89,19 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const x = setInterval(updateCountdown, 1000); // Update countdown every second
 
   // Event listeners for buttons
-  document.getElementById("set-date").addEventListener("click", () => {
-    const newDate = document.getElementById("new-date").value;
-    if (newDate) {
-      setNewDate(newDate);
-      document.getElementById("message").textContent =
-        "New date set successfully!";
-    } else {
-      document.getElementById("message").textContent = "Please select a date.";
-    }
-  });
+  // document.getElementById("set-date").addEventListener("click", () => {
+  //   const newDate = document.getElementById("new-date").value;
+  //   if (newDate) {
+  //     setNewDate(newDate);
+  //     document.getElementById("message").textContent =
+  //       "New date set successfully!";
+  //   } else {
+  //     document.getElementById("message").textContent = "Please select a date.";
+  //   }
+  // });
 
   // Back button functionality
   document.getElementById("back-button").addEventListener("click", () => {
-    window.location.href = "index.html";
+    window.location.href = "../homePage/index.html";
   });
 });
