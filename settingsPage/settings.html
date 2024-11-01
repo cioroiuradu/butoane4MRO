@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Countdown Timer</title>
+    <link rel="stylesheet" href="./settings.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../homePage/logo.png" type="image/png" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Set New Countdown Time</h1>
+      <div class="date-time-picker">
+        <label for="new-date">Select Date and Time:</label>
+        <input type="datetime-local" id="new-date" />
+      </div>
+      <button id="set-date">Set Date</button>
+      <p id="message"></p>
+      <button id="back-button" class="back-button">Back</button>
+    </div>
+    <script>
+      document.getElementById("back-button").addEventListener("click", () => {
+        window.location.href = "../homePage/index.html";
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

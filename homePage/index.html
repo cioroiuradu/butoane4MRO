@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown butoane</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="../homePage/logo.png" type="image/png" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOM2jW7v4xQ2rKkD5l5UZ5yWdd5T4wK80P+9cmCQfrhY2a6aJ/MaEKJjO/1bw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="sidebar close">
+      <header>
+        <div class="image-text">
+          <span class="image">
+            <img src="logo.png" alt="Logo" style="width: 30px; height: 30px" />
+          </span>
+          <div class="text logo-text">
+            <span class="name">4MRO</span>
+          </div>
+        </div>
+        <i class="bx bx-chevron-right toggle"></i>
+      </header>
+      <div class="menu-bar">
+        <div class="menu">
+          <ul class="menu-links">
+            <li class="nav-link">
+              <a href="../signinPage/signin.html">
+                <i class="bx bx-log-in-circle icon"></i>
+
+                <span class="text nav-text">Sign In</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="../signupPage/signup.html">
+                <i class="bx bxs-up-arrow-circle icon"></i>
+                <span class="text nav-text">Sign Up</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="../settingsPage/settings.html">
+                <i class="bx bx-bell icon"></i>
+                <span class="text nav-text">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="bottom-content">
+          <li class="">
+            <a href="#">
+              <i class="bx bx-log-out icon"></i>
+              <span class="text nav-text">Logout</span>
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="title-container">
+        <img src="logo.png" alt="Logo" class="logo" />
+        <h1>
+          <span class="title-text"
+            >URMĂTOAREA GLUMĂ CU BUTOANELE VA FI ÎN:</span
+          >
+        </h1>
+      </div>
+
+      <!-- Countdown Timer -->
+      <div class="countdown">
+        <div class="time">
+          <div id="days">00</div>
+          <div class="label">ZILE</div>
+        </div>
+        <div class="time">
+          <div id="hours">00</div>
+          <div class="label">ORE</div>
+        </div>
+        <div class="time">
+          <div id="minutes">00</div>
+          <div class="label">MIN</div>
+        </div>
+        <div class="time">
+          <div id="seconds">00</div>
+          <div class="label">SEC</div>
+        </div>
+      </div>
+
+      <canvas id="fireworks"></canvas>
+    </div>
+    <script>
+      const body = document.querySelector("body"),
+        sidebar = body.querySelector("nav"),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector(".toggle-switch"),
+        modeText = body.querySelector(".mode-text");
+      toggle.addEventListener("click", () => {
+        sidebar.classList.toggle("close");
+      });
+      searchBtn.addEventListener("click", () => {
+        sidebar.classList.remove("close");
+      });
+      modeSwitch.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          modeText.innerText = "Light mode";
+        } else {
+          modeText.innerText = "Dark mode";
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
